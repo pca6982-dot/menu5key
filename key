@@ -1,1 +1,6 @@
-2721005445026087831
+local CurrentKey = MachoAuthenticationKey(272100544502608783)
+
+if not string.find(KeysBin, CurrentKey, 1, true) then
+    MachoMenuNotification("Authentication Failed", "Your key is not authorized.")
+    return
+end
